@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IST for Space</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet"
+	href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<!--header--->
+	<header>
+		<a href="#" class="logo">Space Ship</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#param">Parameters</a></li>
+			<li><a href="#env">Environment</a></li>
+			<li><a href="#sup">Supplies Us</a></li>
+			<li><a href="#met">Metrics</a></li>
+		</ul>
+	</header>
+
+	<!--Home section--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1>Interplanetary Transport <br> System(ITS)</h1>
+			<p>Enthusiastically extend extensive customer service </p>
+
+		</div>
+	</section>
+
+	<!--container--->
+	<section class="container" id="param">
+		<div class="text">
+			<h2>Start Your Vacation <br> Browse Ship Parameters!</h2>
+		</div>
+
+		<div class="row-items">
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/param1.png">
+				</div>
+				<h4>Fuel</h4>
+				<button class="stars" onclick="getFuel()">Get Fuel Status</button>
+				<p id="fuel"></p>
+
+
+			</div>
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/param2.png">
+				</div>
+				<h4>Throttle</h4>
+				<button class="stars" onclick="getThrottle()">Get Throttle Status</button>
+				<p id="throttle"></p>
+			</div>
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/param3.png">
+				</div>
+				<h4>Speed</h4>
+				<button class="stars" onclick="getSpeed()">Get Speed Status</button>
+				<p id="speed"></p>
+			</div>
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/param4.png">
+				</div>
+				<h4>Acceleration (G-forse)</h4>
+				<button class="stars" onclick="getAcce()">Get Acceleration Status</button>
+				<p id="acce"></p>
+			</div>
+
+		</div>
+	</section>
+
+	<!--Package section--->
+	<section class="package" id="env">
+		<div class="title">
+			<h2>Our Ship Environments</h2>
+		</div>
+
+		<div class="package-content">
+			<div class="box">
+				<div class="location">
+					<h4>Gravity</h4>
+
+				</div>
+				<div class="thum">
+					<img src="img/img-1.jpg">
+
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+
+						<button class="stars" onclick="getGravity()">Get Gravity Status</button>
+						<p id="gravity"></p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="location">
+					<h4>Distance Travel</h4>
+
+				</div>
+				<div class="thum">
+					<img src="img/img2.jpg">
+
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<button class="stars" onclick="getDistance()">Get Distance</button>
+						<p id="distance"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+
+				<div class="location">
+					<h4>Atmosphere</h4>
+				</div>
+
+				<div class="thum">
+					<img src="img/img-3.jpg">
+
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<button class="stars" onclick="getAtmos()">Get Atmosphere Status</button>
+						<p id="atmos"></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!--destination section--->
+	<section class="destination" id="sup">
+		<div class="title">
+			<h2>Our Supplies</h2>
+		</div>
+
+		<div class="row-items">
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/supp1.png">
+				</div>
+				<h4>Food</h4>
+				<button class="stars" onclick="getFood()">Get Food Status</button>
+				<p id="food"></p>
+
+
+			</div>
+
+			<div class="container-box">
+				<div class="container-img">
+					<img src="img/supp2.png">
+				</div>
+				<h4>Water</h4>
+				<button class="stars" onclick="getWater()">Get Water Status</button>
+				<p id="water"></p>
+			</div>
+
+
+
+		</div>	</section>
+
+
+		<!--destination section--->
+		<section class="destination" id="met">
+			<div class="title">
+				<h2>Metrics</h2>
+			</div>
+
+			<div class="row-items">
+				<div class="container-box">
+					<div class="location">
+						<h4>Gravity Converter</h4>
+					</div>
+
+							<input type="text" placeholder="Type Here" required>
+							<input type="submit" value="Convert" onclick="convertGravity()">
+
+
+					<p id="gravityconv"></p>
+
+				</div>
+
+				<div class="container-box">
+					<div class="location">
+						<h4>Miles Converter</h4>
+					</div>
+
+
+
+							<span><input type="text" placeholder="Type Here" required></span>
+							<span><input type="submit" value="Convert" onclick="convertMiles()"></span>
+
+
+					<p id="mileconvert"></p>
+				</div>
+
+
+
+			</div>
+		</section>
+
+
+
+			<!--footer--->
+			<section id="contact">
+
+
+				<div class="end-text">
+					<p>Copyright ©2022 All rights reserved | Made by Daniela Kamenecka </p>
+				</div>
+			</section>
+
+			<!--link to js--->
+			<script src="js/script.js"></script>
+
+
+		</body>
+		</html>
